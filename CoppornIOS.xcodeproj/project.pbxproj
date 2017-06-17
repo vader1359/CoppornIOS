@@ -12,9 +12,12 @@
 		B55F20021EF5AAF1001150D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55F20001EF5AAF1001150D4 /* Main.storyboard */; };
 		B55F20041EF5AAF1001150D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55F20031EF5AAF1001150D4 /* Assets.xcassets */; };
 		B55F20071EF5AAF1001150D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55F20051EF5AAF1001150D4 /* LaunchScreen.storyboard */; };
+		EC9867D65A3C6C2EC855DC11 /* Pods_CoppornIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C04DBDD11DC50188832449 /* Pods_CoppornIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F5BDC8E44BD333DF4BA6FB /* Pods-CoppornIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoppornIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoppornIOS/Pods-CoppornIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A5B04E206065864542BD043D /* Pods-CoppornIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoppornIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoppornIOS/Pods-CoppornIOS.release.xcconfig"; sourceTree = "<group>"; };
 		B55F1FF91EF5AAF1001150D4 /* CoppornIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoppornIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55F1FFC1EF5AAF1001150D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B55F1FFE1EF5AAF1001150D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		B55F20031EF5AAF1001150D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55F20061EF5AAF1001150D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B55F20081EF5AAF1001150D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C04DBDD11DC50188832449 /* Pods_CoppornIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoppornIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9867D65A3C6C2EC855DC11 /* Pods_CoppornIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7712A153711DB4FEAD90BF4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C04DBDD11DC50188832449 /* Pods_CoppornIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91B65E37B65D0E7863F0FBB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53F5BDC8E44BD333DF4BA6FB /* Pods-CoppornIOS.debug.xcconfig */,
+				A5B04E206065864542BD043D /* Pods-CoppornIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B55F1FF01EF5AAF1001150D4 = {
 			isa = PBXGroup;
 			children = (
 				B55F1FFB1EF5AAF1001150D4 /* CoppornIOS */,
 				B55F1FFA1EF5AAF1001150D4 /* Products */,
+				91B65E37B65D0E7863F0FBB0 /* Pods */,
+				7712A153711DB4FEAD90BF4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B55F200B1EF5AAF1001150D4 /* Build configuration list for PBXNativeTarget "CoppornIOS" */;
 			buildPhases = (
+				EBCFF848224B2C41F9582A20 /* [CP] Check Pods Manifest.lock */,
 				B55F1FF51EF5AAF1001150D4 /* Sources */,
 				B55F1FF61EF5AAF1001150D4 /* Frameworks */,
 				B55F1FF71EF5AAF1001150D4 /* Resources */,
+				CF65304BC51C9C045CAD2740 /* [CP] Embed Pods Frameworks */,
+				3E50C385B1D8BCCBA5706792 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E50C385B1D8BCCBA5706792 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoppornIOS/Pods-CoppornIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF65304BC51C9C045CAD2740 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoppornIOS/Pods-CoppornIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCFF848224B2C41F9582A20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B55F1FF51EF5AAF1001150D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -182,6 +257,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -237,6 +314,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -267,6 +346,7 @@
 		};
 		B55F200C1EF5AAF1001150D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F5BDC8E44BD333DF4BA6FB /* Pods-CoppornIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U9M6882WKR;
@@ -282,6 +362,7 @@
 		};
 		B55F200D1EF5AAF1001150D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5B04E206065864542BD043D /* Pods-CoppornIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U9M6882WKR;
@@ -314,6 +395,7 @@
 				B55F200D1EF5AAF1001150D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
