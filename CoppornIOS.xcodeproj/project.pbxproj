@@ -13,6 +13,8 @@
 		B55F20041EF5AAF1001150D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55F20031EF5AAF1001150D4 /* Assets.xcassets */; };
 		B55F20071EF5AAF1001150D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55F20051EF5AAF1001150D4 /* LaunchScreen.storyboard */; };
 		B56FAB561EF7226B005EE1F9 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FAB551EF7226B005EE1F9 /* MovieViewController.swift */; };
+		B56FAB5A1EF723B4005EE1F9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FAB591EF723B4005EE1F9 /* SplashViewController.swift */; };
+		B56FAB5F1EF731B8005EE1F9 /* itVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B56FAB5E1EF731AC005EE1F9 /* itVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		B55F20061EF5AAF1001150D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B55F20081EF5AAF1001150D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56FAB551EF7226B005EE1F9 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		B56FAB591EF723B4005EE1F9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B56FAB5B1EF724FD005EE1F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B56FAB5E1EF731AC005EE1F9 /* itVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = itVideo.mp4; path = ../../../Desktop/itVideo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,8 @@
 		B55F1FF01EF5AAF1001150D4 = {
 			isa = PBXGroup;
 			children = (
+				B56FAB5E1EF731AC005EE1F9 /* itVideo.mp4 */,
+				B56FAB5B1EF724FD005EE1F9 /* README.md */,
 				B55F1FFB1EF5AAF1001150D4 /* CoppornIOS */,
 				B55F1FFA1EF5AAF1001150D4 /* Products */,
 				EE78BEE3C4374FC0E44EB7DE /* Pods */,
@@ -71,6 +78,7 @@
 			children = (
 				B55F1FFC1EF5AAF1001150D4 /* AppDelegate.swift */,
 				B55F20001EF5AAF1001150D4 /* Main.storyboard */,
+				B56FAB591EF723B4005EE1F9 /* SplashViewController.swift */,
 				B55F20031EF5AAF1001150D4 /* Assets.xcassets */,
 				B55F20051EF5AAF1001150D4 /* LaunchScreen.storyboard */,
 				B55F20081EF5AAF1001150D4 /* Info.plist */,
@@ -149,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56FAB5F1EF731B8005EE1F9 /* itVideo.mp4 in Resources */,
 				B55F20071EF5AAF1001150D4 /* LaunchScreen.storyboard in Resources */,
 				B55F20041EF5AAF1001150D4 /* Assets.xcassets in Resources */,
 				B55F20021EF5AAF1001150D4 /* Main.storyboard in Resources */,
@@ -210,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56FAB5A1EF723B4005EE1F9 /* SplashViewController.swift in Sources */,
 				B55F1FFD1EF5AAF1001150D4 /* AppDelegate.swift in Sources */,
 				B56FAB561EF7226B005EE1F9 /* MovieViewController.swift in Sources */,
 			);
