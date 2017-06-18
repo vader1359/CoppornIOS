@@ -7,5 +7,6 @@ target 'CoppornIOS' do
 
   # Pods for CoppornIOS
   pod 'AFNetworking', '~> 3.0'
+  pod 'MBProgressHUD'
 
 end

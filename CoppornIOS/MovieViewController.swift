@@ -8,10 +8,13 @@
 
 import UIKit
 import AFNetworking
+import MBProgressHUD
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // List of Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorBar: UILabel!
+    
     
     // List of Global Variables
     var movies = [NSDictionary]()
@@ -20,14 +23,22 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedURL = ""
     var selectedOverview = ""
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        errorBar.isHidden = true
         // Do any additional setup after loading the view.
+        
+        
+        refreshControl.addTarget(self, action: #selector(fetchMovies(_refreshControl: )), for: UIControlEvents.valueChanged)
+        
         tableView.delegate = self
         tableView.dataSource = self
         
-        fetchMovies()
+        tableView.insertSubview(refreshControl, at: 0)
+        
+        fetchMovies(_refreshControl:refreshControl)
         
     }
     
@@ -71,7 +82,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     // This function must be inside the class for the global variable to work
-    func fetchMovies() {
+    @objc func fetchMovies(_refreshControl: UIRefreshControl) {
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
         let request = URLRequest(
@@ -83,9 +94,22 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             delegate: nil,
             delegateQueue: OperationQueue.main
         )
+        // Display HUD before the request is made
+         MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        // Make request to the server
         let task: URLSessionDataTask =
             session.dataTask(with: request,
+                             // FIXME: NEED LOOK BACK - What is the in keyword?
                              completionHandler: { (dataOrNil, response, error) in
+                                
+                                // Hide HUD once the network request comes back (must be done on main UI thread)
+                                MBProgressHUD.hide(for: self.view, animated: true)
+                                
+                                if let networkError = error {
+                                    self.errorBar.isHidden = false
+                                }
+                                
                                 if let data = dataOrNil {
                                     // Get the whole response as jsonObject and convert it to an NSDictionary
                                     if let responseDictionary = try! JSONSerialization.jsonObject(
@@ -95,6 +119,8 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                         // Need this to reload the table after fetching
                                         self.tableView.reloadData()
                                         
+                                        // Tell the refreshControl to stop spinning
+                                        self.refreshControl.endRefreshing()
                                         
                                     }
                                 }

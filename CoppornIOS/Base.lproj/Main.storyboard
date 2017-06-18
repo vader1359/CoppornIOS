@@ -25,9 +25,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your are offline." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YHT-Tz-vrV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="127" id="Hjd-E2-hpf" customClass="MovieCell" customModule="CoppornIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="127"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hjd-E2-hpf" id="15T-MU-DJM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
@@ -66,6 +74,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fdI-xJ-3aG"/>
                     <connections>
+                        <outlet property="errorBar" destination="YHT-Tz-vrV" id="5V1-Eh-jJg"/>
                         <outlet property="tableView" destination="AMA-0G-ii8" id="lIC-lw-y5c"/>
                         <segue destination="8Xp-7k-mCT" kind="show" identifier="detailSegue" id="cQ4-Ub-iRZ"/>
                     </connections>
