@@ -21,19 +21,21 @@ The following **optional** features are implemented:
 - [ ] Add a search bar.
 - [ ] All images fade in.
 - [ ] For the large poster, load the low-res image first, switch to high-res when complete.
-- [ ] Customize the highlight and selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [x] Customize the highlight and selection effect of the cell.
+- [x] Customize the navigation bar.
 
 The following **additional** features are implemented:
-- [ ] Zik zak posters
-- [ ] Background video using a cropped trailer
+- [x] Redesign everything
+- [x] Zik zak posters
+- [x] Background video using a cropped trailer
 - [ ] Customized tab bars
 - [ ] Cell's elements overlap Cells (Poster images bigger than the cell)
-- [ ] Apply Guassian blur, shadow effect, transparent, darken, etc.
+- [x] Apply Guassian blur, shadow effect, transparent, darken, etc.
 - [ ] Spotlight effect: cells in the middle is hight light, others are more transparent
 - [ ] Floating up animation
 - [ ] Swipe right to show trailer, Swipe left to show review (hard coded review for UI purpose only)
 - [ ] Poster big and small animation
+- [x] Transfer Object through ViewControllers
 
 ## Video Walkthrough
 
