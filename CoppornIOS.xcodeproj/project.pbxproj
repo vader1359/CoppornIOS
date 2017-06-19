@@ -18,6 +18,7 @@
 		B56FAB631EF74F66005EE1F9 /* MovieCellRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FAB621EF74F66005EE1F9 /* MovieCellRight.swift */; };
 		B56FAB671EF76A22005EE1F9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FAB661EF76A22005EE1F9 /* Movie.swift */; };
 		B5DD295C1EF788A2002CE8B8 /* itVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B5DD295B1EF7888E002CE8B8 /* itVideo.mp4 */; };
+		B5DD29601EF7A411002CE8B8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD295F1EF7A411002CE8B8 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B56FAB621EF74F66005EE1F9 /* MovieCellRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellRight.swift; sourceTree = "<group>"; };
 		B56FAB661EF76A22005EE1F9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B5DD295B1EF7888E002CE8B8 /* itVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = itVideo.mp4; path = ../../../Desktop/itVideo.mp4; sourceTree = "<group>"; };
+		B5DD295F1EF7A411002CE8B8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				B55F20001EF5AAF1001150D4 /* Main.storyboard */,
 				B56FAB591EF723B4005EE1F9 /* SplashViewController.swift */,
 				B55F20031EF5AAF1001150D4 /* Assets.xcassets */,
+				B5DD295F1EF7A411002CE8B8 /* DetailsViewController.swift */,
 				B56FAB661EF76A22005EE1F9 /* Movie.swift */,
 				B56FAB601EF74984005EE1F9 /* MovieCellLeft.swift */,
 				B56FAB621EF74F66005EE1F9 /* MovieCellRight.swift */,
@@ -232,6 +235,7 @@
 				B55F1FFD1EF5AAF1001150D4 /* AppDelegate.swift in Sources */,
 				B56FAB671EF76A22005EE1F9 /* Movie.swift in Sources */,
 				B56FAB611EF74984005EE1F9 /* MovieCellLeft.swift in Sources */,
+				B5DD29601EF7A411002CE8B8 /* DetailsViewController.swift in Sources */,
 				B56FAB561EF7226B005EE1F9 /* MovieViewController.swift in Sources */,
 				B56FAB631EF74F66005EE1F9 /* MovieCellRight.swift in Sources */,
 			);

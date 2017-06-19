@@ -97,7 +97,7 @@ class SplashViewController: UIViewController {
         
         let nextVC = segue.destination as! MovieViewController
         nextVC.movieList = movieList
-
+        
         
     }
     

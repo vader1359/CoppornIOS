@@ -15,6 +15,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // List of global variables
     var movieList = [Movie]()
+    var selectedMovie = Movie(title: "", overview: "", posterURL: "")
     
     
     override var prefersStatusBarHidden: Bool {
@@ -32,6 +33,29 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        let nextVC = segue.destination as! DetailsViewController
+        nextVC.movie = selectedMovie
+        
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.selectionStyle = .none
+        selectedMovie = movieList[indexPath.row]
+        
+//        performSegue(withIdentifier: "detailScreen", sender: self)
         
     }
     
@@ -73,14 +97,8 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
+    
     
 }
