@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  MovieCellRight.swift
 //  CoppornIOS
 //
 //  Created by Vader1359 on 6/19/17.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class MovieCell: UITableViewCell {
-    // List of outlets
+class MovieCellRight: UITableViewCell {
     @IBOutlet weak var posterImg: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

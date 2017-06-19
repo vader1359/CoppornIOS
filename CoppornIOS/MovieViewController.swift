@@ -27,19 +27,31 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 22
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
+        if (indexPath.row % 2) == 0 {
+            
+            let cellLeft = tableView.dequeueReusableCell(withIdentifier: "movieCellLeft") as! MovieCellLeft
+            
+            cellLeft.backgroundColor = .clear
+            cellLeft.titleLabel.text = "Wonder Woman"
+            cellLeft.overviewLabel.text = "An Amazon princess comes to the world of Man to become the greatest of the female super heroes."
+            return cellLeft
+        } else {
+            
+            let cellRight = tableView.dequeueReusableCell(withIdentifier: "movieCellRight") as! MovieCellRight
+            
+            cellRight.backgroundColor = .clear
+            cellRight.titleLabel.text = "Pirates"
+            cellRight.overviewLabel.text = "Captain Jack Sparrow searches for the Poseidon’s trident  while being pursued by an undead captain."
+            return cellRight
+        }
         
-        cell.backgroundColor = .clear
-        cell.titleLabel.text = "Wonder Woman"
-        cell.overviewLabel.text = "An Amazon princess comes to the world of Man to become the greatest of the female super heroes."
-        
-        return cell
     }
     
     override func didReceiveMemoryWarning() {

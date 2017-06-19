@@ -25,8 +25,8 @@ The following **optional** features are implemented:
 - [ ] Customize the navigation bar.
 
 The following **additional** features are implemented:
-- [ ] Zik zak posters
-- [ ] Background video using a cropped trailer
+- [x] Zik zak posters
+- [x] Background video using a cropped trailer
 - [ ] Customized tab bars
 - [ ] Cell's elements overlap Cells (Poster images bigger than the cell)
 - [ ] Apply Guassian blur, shadow effect, transparent, darken, etc.

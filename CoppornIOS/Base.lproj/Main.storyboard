@@ -88,7 +88,7 @@ Copp*rn is children friendly ~~~</string>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="215" id="21n-ct-6Kh" customClass="MovieCell" customModule="CoppornIOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCellLeft" rowHeight="215" id="21n-ct-6Kh" customClass="MovieCellLeft" customModule="CoppornIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="21n-ct-6Kh" id="Dm1-8C-b1C">
@@ -100,14 +100,14 @@ Copp*rn is children friendly ~~~</string>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-sV-dWv">
-                                                    <rect key="frame" x="172" y="49" width="177" height="27"/>
+                                                    <rect key="frame" x="172" y="46" width="177" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="0.8698384165763855" green="0.35694646835327148" blue="0.35964620113372803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An Amazon princess comes to the world of Man to become the greatest of the female super heroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuS-Jv-w3n">
-                                                    <rect key="frame" x="172" y="84" width="195" height="88"/>
+                                                    <rect key="frame" x="172" y="81" width="195" height="88"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.70962208510000002" green="0.65662443640000001" blue="0.74064183240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +119,39 @@ Copp*rn is children friendly ~~~</string>
                                             <outlet property="overviewLabel" destination="RuS-Jv-w3n" id="gAf-9A-r2p"/>
                                             <outlet property="posterImg" destination="nOP-Us-Ssq" id="31w-OT-Rs1"/>
                                             <outlet property="titleLabel" destination="HAT-sV-dWv" id="qwt-j0-eLa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCellRight" rowHeight="222" id="KEG-JJ-a0i" customClass="MovieCellRight" customModule="CoppornIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="375" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KEG-JJ-a0i" id="C3z-Kh-C1v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="221.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-ap-BuC">
+                                                    <rect key="frame" x="232" y="8" width="143" height="215"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pirates Carribean" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KC-fv-CvX">
+                                                    <rect key="frame" x="26" y="51" width="177" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="0.86983841660000005" green="0.35694646839999999" blue="0.35964620110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain Jack Sparrow searches for the Poseidon’s trident  while being pursued by an undead captain." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB8-5j-6qm">
+                                                    <rect key="frame" x="8" y="84" width="195" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="0.70962208510000002" green="0.65662443640000001" blue="0.74064183240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="overviewLabel" destination="nB8-5j-6qm" id="V7I-4H-9uF"/>
+                                            <outlet property="posterImg" destination="diJ-ap-BuC" id="6XR-mo-Pbg"/>
+                                            <outlet property="titleLabel" destination="6KC-fv-CvX" id="85q-q7-vBX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
