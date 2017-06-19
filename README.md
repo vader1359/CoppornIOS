@@ -1,6 +1,6 @@
 # Project 1 - *Name of App Here*
 
-**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Copp(rn** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **X** hours spent in total
 
@@ -22,14 +22,16 @@ The following **optional** features are implemented:
 - [ ] All images fade in.
 - [ ] For the large poster, load the low-res image first, switch to high-res when complete.
 - [x] Customize the highlight and selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [x] Customize the navigation bar.
 
 The following **additional** features are implemented:
+- [x] Transfer object through segue
+- [x] Redesign everything
 - [x] Zik zak posters
 - [x] Background video using a cropped trailer
 - [ ] Customized tab bars
 - [ ] Cell's elements overlap Cells (Poster images bigger than the cell)
-- [ ] Apply Guassian blur, shadow effect, transparent, darken, etc.
+- [x] Apply Guassian blur, shadow effect, transparent, darken, etc.
 - [ ] Spotlight effect: cells in the middle is hight light, others are more transparent
 - [ ] Floating up animation
 - [ ] Swipe right to show trailer, Swipe left to show review (hard coded review for UI purpose only)
