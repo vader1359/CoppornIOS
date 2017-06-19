@@ -13,6 +13,7 @@ import AFNetworking
 
 class SplashViewController: UIViewController {
     // List of outlets
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBAction func goBtn(_ sender: Any) {
         performSegue(withIdentifier: "mainScreen", sender: self)
         
@@ -36,6 +37,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         
         // Do any additional setup after loading the view.
@@ -134,6 +136,8 @@ class SplashViewController: UIViewController {
                                             
                                             
                                         }
+                                        
+                                        
                                         
                                         
                                         

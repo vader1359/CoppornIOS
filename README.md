@@ -34,6 +34,7 @@ The following **additional** features are implemented:
 - [ ] Floating up animation
 - [ ] Swipe right to show trailer, Swipe left to show review (hard coded review for UI purpose only)
 - [ ] Poster big and small animation
+- [ ] Marqueel label
 
 ## Video Walkthrough
 

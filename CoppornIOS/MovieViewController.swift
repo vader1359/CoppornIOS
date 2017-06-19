@@ -34,6 +34,8 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.reloadData()
+        
     }
     
     // MARK: - Navigation
@@ -71,6 +73,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellLeft.titleLabel.text = movieList[indexPath.row].title
             cellLeft.overviewLabel.text = movieList[indexPath.row].overview
             
+            cellLeft.posterImg.image = nil
             let posterURL = NSURL(string: movieList[indexPath.row].posterURL)! as URL
             cellLeft.posterImg.setImageWith(posterURL)
 
@@ -82,7 +85,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellRight.backgroundColor = .clear
             cellRight.titleLabel.text = movieList[indexPath.row].title
             cellRight.overviewLabel.text = movieList[indexPath.row].overview
-            
+            cellRight.posterImg.image = nil
             let posterURL = NSURL(string: movieList[indexPath.row].posterURL)! as URL
             cellRight.posterImg.setImageWith(posterURL)
             
