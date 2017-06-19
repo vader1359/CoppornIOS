@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AFNetworking
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // List of outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // List of global variables
+    var movieList = [Movie]()
     
     
     override var prefersStatusBarHidden: Bool {
@@ -19,6 +23,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Do any additional setup after loading the view.
         
@@ -31,7 +36,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 22
+        return movieList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row % 2) == 0 {
@@ -39,16 +44,24 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let cellLeft = tableView.dequeueReusableCell(withIdentifier: "movieCellLeft") as! MovieCellLeft
             
             cellLeft.backgroundColor = .clear
-            cellLeft.titleLabel.text = "Wonder Woman"
-            cellLeft.overviewLabel.text = "An Amazon princess comes to the world of Man to become the greatest of the female super heroes."
+            cellLeft.titleLabel.text = movieList[indexPath.row].title
+            cellLeft.overviewLabel.text = movieList[indexPath.row].overview
+            
+            let posterURL = NSURL(string: movieList[indexPath.row].posterURL)! as URL
+            cellLeft.posterImg.setImageWith(posterURL)
+
             return cellLeft
         } else {
             
             let cellRight = tableView.dequeueReusableCell(withIdentifier: "movieCellRight") as! MovieCellRight
             
             cellRight.backgroundColor = .clear
-            cellRight.titleLabel.text = "Pirates"
-            cellRight.overviewLabel.text = "Captain Jack Sparrow searches for the Poseidon’s trident  while being pursued by an undead captain."
+            cellRight.titleLabel.text = movieList[indexPath.row].title
+            cellRight.overviewLabel.text = movieList[indexPath.row].overview
+            
+            let posterURL = NSURL(string: movieList[indexPath.row].posterURL)! as URL
+            cellRight.posterImg.setImageWith(posterURL)
+            
             return cellRight
         }
         

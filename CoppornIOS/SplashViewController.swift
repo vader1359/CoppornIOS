@@ -8,10 +8,27 @@
 
 import UIKit
 import AVFoundation
+import AFNetworking
 
 
 class SplashViewController: UIViewController {
+    // List of outlets
+    @IBAction func goBtn(_ sender: Any) {
+        performSegue(withIdentifier: "mainScreen", sender: self)
+        
+    }
+    
+    
+    // List of Variables
+    var results = [NSDictionary]()
+    var movieList = [Movie]()
+    
+    let posterBaseURL = "http://image.tmdb.org/t/p/w500"
+    
     // AVPlayer variables
+    
+    
+    
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
@@ -19,6 +36,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Do any additional setup after loading the view.
         
@@ -43,6 +61,7 @@ class SplashViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)),
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                object: avPlayer.currentItem)
+        fetchMovies()
         
         
     }
@@ -69,14 +88,62 @@ class SplashViewController: UIViewController {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        let nextVC = segue.destination as! MovieViewController
+        nextVC.movieList = movieList
+
+        
+    }
+    
+    func fetchMovies() {
+        let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let request = URLRequest(
+            url: url!,
+            cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        let session = URLSession(
+            configuration: URLSessionConfiguration.default,
+            delegate: nil,
+            delegateQueue: OperationQueue.main
+        )
+        let task: URLSessionDataTask =
+            session.dataTask(with: request,
+                             completionHandler: { (dataOrNil, response, error) in
+                                if let data = dataOrNil {
+                                    if let responseDictionary = try! JSONSerialization.jsonObject(
+                                        with: data, options:[]) as? NSDictionary {
+                                        self.results = responseDictionary["results"] as! [NSDictionary]
+                                        
+                                        for result in self.results {
+                                            let title = result["title"] as! String
+                                            let overview = result["overview"] as! String
+                                            
+                                            let posterPath = result["poster_path"] as! String
+                                            let posterURL = self.posterBaseURL + posterPath
+                                            
+                                            
+                                            let movie = Movie(title: title, overview: overview, posterURL: posterURL)
+                                            self.movieList.append(movie)
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                        
+                                    }
+                                }
+            })
+        task.resume()
+    }
+    
+    
+    
     
 }
